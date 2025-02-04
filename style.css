@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 90px;
+    margin: auto;
+    max-width: 80vw;
+}
+/* .navLogo{
+    width: 150px;
+    height: 120px;
+    
+} */
+.navLogo img{
+    width: 150px;
+    height: 130px;
+    border-radius: 100px;
+    
+}
+.lists ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.lists a {
+    text-decoration: none;
+    color: white;
+}
+.lists a:hover {
+    color: #7AB730;
+    transition: all 0.2s ease-in;
+}
+section {
+    min-height: 100vh;
+}
+#Home {
+    background-image: url('assests/hero-banner.jpg' );
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    background-color: rgba(0, 0, 0, 0.678);
+    background-blend-mode: overlay;
+    background-position: center;
+    /* animation: zoomIn 10s forwards; */
+    width: 100%;
+    min-height: 80vh;
+    box-sizing: content-box;
+    
+
+}
+.lazy-background {
+    background: #000; /* fallback color */
+    background-size: cover;
+    background-position: center;}
+@keyframes zoomIn {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(1.1);
+    }
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+    color: white;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.intro h2,
+.intro h3,
+.intro p {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+.intro h2 {
+    animation-delay: 0.5s;
+    font-size: 60px;
+    transform: scale(1.1, 1.2);
+}
+.intro h3 {
+    animation-delay: 1s;
+    font-size: 28px;
+}
+.intro p {
+    animation-delay: 1.5s;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.explore {
+    animation: popIn 0.5s forwards 2s;
+    background-color: #7AB730;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 40px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: scale(0.5);
+    text-align: center;
+    display: inline-block;
+}
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.intro a {
+    text-decoration: none;
+    color: white;
+}
+.intro a:hover {
+    color: black;
+    transition: all 0.3s ease-in;
+}
+#HolidayPackages {
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2;
+    background-color: rgb(247, 247, 247);
+}
+.head {
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+    color: black;
+    /* font-style: italic; */
+    
+    margin-bottom: 25px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    max-width: 90vh;
+    margin: auto;
+    
+}
+.items {
+    text-align: center;
+    background-color: white;
+    width: 370px;
+    box-shadow: 1px 2px 3px gray;
+}
+.items img {
+    width: 100%;
+    height: 250px;
+    padding: 7px;
+
+}
+.title h3 {
+    line-height: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+}
+.title p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    color: rgb(135, 135, 135);
+    margin-bottom: 5px;
+    
+}
+.details {
+    border-top: 1px solid rgb(227, 221, 221);
+    margin: 8px 0px 8px 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.details h3 {
+    line-height: 25px;
+    font-size: 15px;
+}
+.details p {
+    line-height: 17px;
+    color: rgb(102, 102, 102);
+    font-size: 13px;
+}
+.details-img img {
+    margin: 12px 0px 12px 0px;
+    width: 100%;
+    height: 100px;
+}
+.booknow {
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #06fff5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.booknow a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+.booknow a:hover {
+    color: black;
+    transition: all 0.1s ease-in;
+}
+.booknow:hover {
+    background-color: white;
+    transition: all 0.1s ease-in;
+}
+.inc-exc {
+    display: flex;
+    background-color: white;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 12px;
+}
+.inclusions li {
+    list-style: none;
+}
+.inclusions {
+    border: 1px solid gray;
+    margin: 50px;
+    width: 500px;
+    border-radius: 5px;
+    padding: 12px;
+}
+.exclusions li {
+    list-style: none;
+}
+.exclusions {
+    border: 1px solid gray;
+    width: 500px;
+    border-radius: 5px;
+    padding: 12px;
+}
+/* css for booking form */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black with opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    transition: all 0.3s ease-in;
+}
+.modal-content h2{
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label {
+    margin-top: 10px;
+}
+form input, form textarea {
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+form button {
+    background-color: #7AB730;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+form button:hover {
+    background-color: #5e8e21;
+}
+
+/* css for contact section */
+#ContactUs {
+    background: #f1f3f7;
+    color: black;
+    line-height: 1.6;
+    font-family: 'Yantramanav', sans-serif;
+    padding-top: 50px
+    }
+.head-contact {
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+    color: black;
+     margin-bottom: 25px;
+}
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300');
+
+/* ------------- */
+/* GLOBAL STYLES */
+/* ------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;            
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brand {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+.brand span {
+    color: #ffffff;
+    
+    
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(57, 82, 163, 0.7);
+}
+
+.wrapper>* {
+    padding: 1em;
+}
+
+/* ------------------- */
+/* COMPANY INFORMATION */
+/* ------------------- */
+
+.company-info {
+    background: rgb(2 255 234 / 64%);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.company-info h3,
+.company-info ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+/* ------- */
+/* CONTACT */
+/* ------- */
+
+.contact {
+    background: #dcdfea;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* ---- */
+/* FORM */
+/* ---- */
+
+
+
+.contact form label {
+    display: block;
+}
+
+.contact form p {
+    margin: 0;
+}
+
+.contact form .full {
+    grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border: solid 1px #627EDC;
+    border-radius: 4px;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form button {
+    background: #06fff5;;
+    border: 0;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+    background: #06fff5;
+    color: black;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+@media only screen and (min-width:1500px) {
+    .contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+@media only screen and (min-width: 968px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    
+}
+    
+    .wrapper>* {
+        padding: 2em;
+    }
+
+    .company-info {
+        border-radius: 4px 0 0 4px;
+    }
+
+    .contact {
+        border-radius: 0 4px 4px 0;
+    }
+
+    .company-info h3,
+    .company-info ul,
+    .brand {
+        text-align: left;
+    }
+
+
+/* css for car rental */
+#CarRental{
+    background-color: rgb(243,243,243);
+
+    
+}
+.carimage img{
+    padding: 7px;
+}
+.car-head{
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+    color: black;
+    
+    margin-bottom: 25px;
+    
+}
+
+/* css for gallery */
+
+.gallery-head{
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+    color: black;
+    
+    margin-bottom: 25px;
+}
+/* CSS FOR FOOTER */
+
+
+footer {
+    background-color:  #06fff5;
+    color: black;
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logoF img {
+    width: 100px;
+    height: auto;
+    border-radius: 100px;
+}
+
+.contact-info, .social-media {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info h4, .social-media h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-info ul, .social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li, .social-media ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li i, .social-media ul li i {
+    margin-right: 10px;
+}
+
+.social-media ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.social-media ul li a:hover {
+    color: #7AB730;
+}
+.registerd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    flex-direction:column;
+
+}
+.registerd img {
+    width: 120px;
+    height: 83px;
+
+}
+/* media queries */
+@media screen and (max-width:968px) {
+    
+    nav{
+        max-width: 90vw;
+        margin: auto;
+    }
+    .title p{
+        font-size: 11px;
+    }
+    .details p{
+        font-size: 11px;
+    }
+    .inc-exc{
+        box-sizing: border-box;
+        position: relative;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .inclusions{
+        width: 300px;
+    }
+    .exclusions{
+        width: 300px;
+        
+    }
+    .inclusions li{
+      font-size: 11px;  
+      width: 50vw;   
+       
+    }
+    .exclusions li{
+        font-size: 11px;
+        width: 50vw;
+        
+    }
+    
+
+    
+    .intro h2{
+        font-size: 30px;
+    }
+    .intro p{
+        font-size: 15px;
+        
+    }
+    .intro h3{
+        font-size: 15px;
+    }
+    .intro{
+        text-align: center;
+    }
+    #Home{
+        animation: none;
+        max-height: 50vh;
+        
+    }
+    .booknow{
+        padding: 6px 18px;
+
+    }
+    
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: transform 0.5s ease;
+    right: 12px;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.hamburger:before {
+    top: -8px;
+}
+
+.hamburger:after {
+    bottom: -8px;
+}
+
+@media screen and (max-width: 968px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .lists ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        text-align: center;
+        height: fit-content;
+
+
+    }
+
+    nav {
+
+
+        .lists ul.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lists ul li {
+            margin: 10px 0;
+        }
+
+        .hamburger.active .hamburger:before {
+            transform: translateY(8px) rotate(45deg);
+
+        }
+
+        .hamburger.active .hamburger:after {
+            transform: translateY(-8px) rotate(-45deg);
+
+        }
+
+    }
+    
+}
+
+@media screen and (max-width: 968px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .contact-info, .social-media {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .registerd {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .registerd img {
+        width: 120px;
+        height: auto;
+    }
+}
+.whatsapp{
+    height: 5px;
+    width: 50px;
+    position: fixed;
+    bottom:150px;
+    right: 3px;
+    z-index: 10;
+}
+.whatsapp img{
+    width: 50px;
+    height: 50px;
+    
+}
+@media screen and (max-width:1154px) {
+    .lists ul {
+        font-size: 17px;
+        
+    }
+    nav{
+        margin: auto;
+        max-width: 90vw;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        max-width: 75vw;
+        margin: auto;
+    }
+}
+@media screen and (max-width:968px){
+    .grid{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        max-width: 40vw;
+        margin: auto;
+
+    }
+}
