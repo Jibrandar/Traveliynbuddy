@@ -58,7 +58,7 @@ section {
     min-height: 100vh;
 }
 #Home {
-    background-image: url('assests/hero-banner.jpg' );
+    background-image: url('https://res.cloudinary.com/devdcurg6/image/upload/v1745422307/hero-banner_b6okzr.jpg' );
     background-size: cover;
     background-repeat: no-repeat;
    
