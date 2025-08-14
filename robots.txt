@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Point search engines to your sitemap
+Sitemap: https://traveliynbuddy.com/sitemap.xml
+
+# Extra: Prevent indexing of common unwanted files/folders
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /assets/temp/
