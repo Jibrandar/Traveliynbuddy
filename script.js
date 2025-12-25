@@ -73,29 +73,4 @@ async function handleSubmit(event) {
     status.innerHTML = "Oops! There was a problem submitting your form"
   });
 }
-if (form) {
-  form.addEventListener("submit", handleSubmit);
-}
-
-// Slider functionality
-const slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
-
-setInterval(() => {
-  slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add("active");
-}, 4500);
-
-const carSlider = document.querySelector(".car-slider");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
-
-nextBtn.addEventListener("click", () => {
-  carSlider.scrollBy({ left: 320, behavior: "smooth" });
-});
-
-prevBtn.addEventListener("click", () => {
-  carSlider.scrollBy({ left: -320, behavior: "smooth" });
-});
-
+form.addEventListener("submit", handleSubmit)
