@@ -11,417 +11,281 @@ body {
     overflow-x: hidden;
 }
 
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  color: #fff;
-}
-
-/* Slider */
-.hero-slider {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* background: rgba(0, 0, 0, 0.6); */
-  z-index: -1;
-}
-
-/* Navbar */
-.navbar {
-  position:absolute;
-  width: 100%;
-  padding: 18px 8%;
-  z-index: 10;
-}
-
-.navbar nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navLogo img {
-  height: 100px;
-    width: 150px;
-  
-}
-
-.lists ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-.lists a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  letter-spacing: 1px;
-  transition: opacity 0.3s;
-  font-weight: 600;
-}
-
-.lists a:hover {
-  opacity: 0.7;
-}
-
-.nav-btn {
-  border: 1px solid #fff;
-  padding: 8px 18px;
-}
-
-/* Hero Text */
-.intro {
-  position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
-  padding: 0 8%;
-  max-width: 650px;
-}
-
-.intro h2 {
-  font-size: 2.8rem;
-  font-weight: 600;
-}
-
-.intro h3 {
-  font-size: 1.3rem;
-  color: #d6d6d6;
-  margin: 15px 0;
-}
-
-.intro p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-}
-
-.explore {
-  display: inline-block;
-  padding: 14px 36px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.explore:hover {
-  background: #fff;
-  color: #000;
-}
-@media (max-width: 576px) {
-  .hero {
-    height: 100vh;
-  }
-
-  .navbar {
-    padding: 14px 6%;
-  }
-
-  .navLogo img {
-    height: 50px;
-    width: 50px;
-  }
-
-  .lists {
-    position: fixed;
-    top: 70px;
-    right: -100%;
+header {
+    position: relative;
+    z-index: 10;
     width: 100%;
-    background: rgba(0,0,0,0.9);
-    transition: right 0.3s ease;
-    text-align: center;
-  }
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 90px;
+    margin: auto;
+    max-width: 80vw;
+}
+/* .navLogo{
+    width: 150px;
+    height: 120px;
+    
+} */
+.navLogo img{
+    width: 150px;
+    height: 130px;
+    border-radius: 100px;
+    
+}
+.lists ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.lists a {
+    text-decoration: none;
+    color: white;
+}
+.lists a:hover {
+    color: #7AB730;
+    transition: all 0.2s ease-in;
+}
+section {
+    min-height: 100vh;
+}
+#Home {
+    background-image: url('https://res.cloudinary.com/devdcurg6/image/upload/v1745422307/hero-banner_b6okzr.jpg' );
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    background-color: rgba(0, 0, 0, 0.678);
+    background-blend-mode: overlay;
+    background-position: center;
+    /* animation: zoomIn 10s forwards; */
+    width: 100%;
+    min-height: 80vh;
+    box-sizing: content-box;
+    
 
-  .lists ul {
+}
+.lazy-background {
+    background: #000; /* fallback color */
+    background-size: cover;
+    background-position: center;}
+@keyframes zoomIn {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(1.1);
+    }
+}
+.intro {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px 0;
-  }
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+    color: white;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.intro h2,
+.intro h3,
+.intro p {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+.intro h2 {
+    animation-delay: 0.5s;
+    font-size: 60px;
+    transform: scale(1.1, 1.2);
+}
+.intro h3 {
+    animation-delay: 1s;
+    font-size: 28px;
+}
+.intro p {
+    animation-delay: 1.5s;
+    font-size: 25px;
+    font-weight: 700;
+}
 
-  .lists.active {
-    right: 0;
-  }
-
-  .intro {
-    top: 58%;
-    padding: 0 6%;
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.explore {
+    animation: popIn 0.5s forwards 2s;
+    background-color: #7AB730;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 40px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: scale(0.5);
     text-align: center;
-  }
-
-  .intro h2 {
-    font-size: 1.9rem;
-  }
-
-  .intro h3 {
-    font-size: 1.05rem;
-  }
-
-  .intro p {
-    font-size: 0.9rem;
-  }
-
-  .explore {
-    padding: 12px 28px;
-    font-size: 0.9rem;
-  }
+    display: inline-block;
 }
-@media (max-width: 768px) {
-  .hero {
-    height: 100vh;
-  }
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 
-  .intro {
-    max-width: 100%;
-  }
-
-  .intro h2 {
-    font-size: 2.3rem;
-  }
-
-  .intro h3 {
-    font-size: 1.15rem;
-  }
-
-  .navbar {
-    padding: 16px 7%;
-  }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
-@media (max-width: 1024px) {
-  .intro {
-    max-width: 550px;
-  }
-
-  .intro h2 {
-    font-size: 2.6rem;
-  }
+.intro a {
+    text-decoration: none;
+    color: white;
 }
-
-
-/* Packages Section */
+.intro a:hover {
+    color: black;
+    transition: all 0.3s ease-in;
+}
 #HolidayPackages {
-  background: #f8f9fb;
-  color: #222;
-  padding: 100px 8%;
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2;
+    background-color: rgb(247, 247, 247);
 }
-
-/* Heading */
-#Packages.head {
-  text-align: center;
-  margin-bottom: 60px;
+.head {
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+    color: black;
+    /* font-style: italic; */
+    
+    margin-bottom: 25px;
 }
-
-#Packages.head span {
-  display: block;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #111;
-}
-
-#Packages.head span:first-child {
-  color: #777;
-  font-size: 0.95rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-/* Grid */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    max-width: 90vh;
+    margin: auto;
+    
 }
-
-/* Card */
 .items {
-  background: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    background-color: white;
+    width: 370px;
+    box-shadow: 1px 2px 3px gray;
 }
+.items img {
+    width: 100%;
+    height: 250px;
+    padding: 7px;
 
-.items:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
-
-/* Image */
-.items .image img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+.title h3 {
+    line-height: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
 }
-
-/* Title */
-.items .title {
-  padding: 22px;
+.title p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    color: rgb(135, 135, 135);
+    margin-bottom: 5px;
+    
 }
-
-.items .title h3 {
-  font-size: 1.35rem;
-  margin-bottom: 8px;
-  color: #111;
-}
-
-.items .title p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Details */
 .details {
-  padding: 0 22px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  font-size: 0.9rem;
-  color: #555;
+    border-top: 1px solid rgb(227, 221, 221);
+    margin: 8px 0px 8px 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-.items:hover .details {
-  max-height: 240px;
-}
-
 .details h3 {
-  font-size: 0.95rem;
-  margin: 15px 0 8px;
-  color: #222;
+    line-height: 25px;
+    font-size: 15px;
 }
-
-.details i {
-  margin-right: 6px;
-  color: #888;
+.details p {
+    line-height: 17px;
+    color: rgb(102, 102, 102);
+    font-size: 13px;
 }
-
 .details-img img {
-  width: 100%;
-  height: 60px;
-  object-fit: cover;
-  opacity: 0.7;
-  border-radius: 8px;
+    margin: 12px 0px 12px 0px;
+    width: 100%;
+    height: 100px;
 }
-
-/* Button */
 .booknow {
-  width: calc(100% - 44px);
-  margin: 20px 22px 25px;
-  padding: 13px 0;
-  background: #1f3c88;
-  border: none;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 1px;
-  cursor: pointer;
-  border-radius: 30px;
-  transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #06fff5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+.booknow a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+.booknow a:hover {
+    color: black;
+    transition: all 0.1s ease-in;
+}
 .booknow:hover {
-  background: #162d66;
+    background-color: white;
+    transition: all 0.1s ease-in;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  #HolidayPackages {
-    padding: 80px 6%;
-  }
-}
-
 .inc-exc {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
-  background: #f8f9fb;
-  padding: 60px 8%;
-  margin-top: 60px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+    display: flex;
+    background-color: white;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 12px;
 }
-
-/* Common card style */
-.inclusions,
-.exclusions {
-  background: #ffffff;
-  width: 100%;
-  max-width: 480px;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+.inclusions li {
+    list-style: none;
 }
-
-/* Headings */
-.inclusions h3,
-.exclusions h3 {
-  font-size: 1.3rem;
-  margin-bottom: 18px;
-  color: #111;
+.inclusions {
+    border: 1px solid gray;
+    margin: 50px;
+    width: 500px;
+    border-radius: 5px;
+    padding: 12px;
 }
-
-/* Lists */
-.inclusions ul,
-.exclusions ul {
-  padding: 0;
-}
-
-.inclusions li,
 .exclusions li {
-  list-style: none;
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 12px;
-  padding-left: 26px;
-  position: relative;
+    list-style: none;
 }
-
-/* Icons */
-.inclusions li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #1b5e4b;
-  font-weight: bold;
+.exclusions {
+    border: 1px solid gray;
+    width: 500px;
+    border-radius: 5px;
+    padding: 12px;
 }
-
-.exclusions li::before {
-  content: "✖";
-  position: absolute;
-  left: 0;
-  color: #b00020;
-  font-weight: bold;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .inc-exc {
-    flex-direction: column;
-    padding: 50px 6%;
-  }
-}
-
 /* css for booking form */
 .modal {
     display: none;
@@ -664,117 +528,22 @@ ul {
 
 
 /* css for car rental */
-#CarRental {
-  background: #f8f9fb;
-  padding: 100px 8%;
+#CarRental{
+    background-color: rgb(243,243,243);
+
+    
 }
-
-.car-head {
-  text-align: center;
-  margin-bottom: 40px;
+.carimage img{
+    padding: 7px;
 }
-
-.car-head h1 {
-  font-size: 2.4rem;
-  color: #111;
-}
-
-/* Slider layout */
-.car-slider-wrapper {
-  position: relative;
-}
-
-.car-slider {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 20px;
-}
-
-.car-slider::-webkit-scrollbar {
-  display: none;
-}
-
-/* Cards (reuse your style) */
-/* Make car cards flexible */
-#CarRental .items {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Title/content should take available space */
-#CarRental .title {
-  padding: 20px;
-  flex-grow: 1;
-}
-
-/* Push button to bottom */
-#CarRental .booknow {
-  margin: 20px;
-  margin-top: auto;
-}
-
-#CarRental .items {
-  min-width: 300px;
-  max-width: 300px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  overflow: hidden;
-}
-
-/* Images */
-#CarRental img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Buttons */
-#CarRental .booknow {
-  margin: 20px;
-  width: calc(100% - 40px);
-}
-
-/* Slider arrows */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #1f3c88;
-  color: #fff;
-  border: none;
-  font-size: 20px;
-  padding: 12px 16px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 5;
-  transition: background 0.3s;
-}
-
-.slider-btn:hover {
-  background: #162d66;
-}
-
-.prev {
-  left: -20px;
-}
-
-.next {
-  right: -20px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .prev, .next {
-    display: none;
-  }
-
-  .car-slider {
-    gap: 20px;
-  }
+.car-head{
+    text-align: center;
+    font-size: 35px;
+    line-height: 2;
+    color: black;
+    
+    margin-bottom: 25px;
+    
 }
 
 /* css for gallery */
