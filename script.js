@@ -1,76 +1,108 @@
-// Get all elements with class name "booknow"
-var bookNowButtons = document.querySelectorAll(".booknow");
+const modal = document.getElementById("bookingModal");
+const btns = document.querySelectorAll(".book-btn");
+const close = document.querySelector(".close");
+const packageInput = document.getElementById("packageName");
 
-// Get the modal
-var modal = document.getElementById("myModal");
+btns.forEach(btn => {
+  btn.onclick = function () {
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    const packageName = this.getAttribute("data-package");
 
-// Function to open the modal
-function openModal() {
-  modal.style.display = "block";
-}
+    packageInput.value = packageName;
 
-// Function to close the modal
-function closeModal() {
+    modal.style.display = "flex";
+  };
+});
+
+close.onclick = function () {
   modal.style.display = "none";
-}
+};
 
-// Add click event listener to each "Book Now" button
-bookNowButtons.forEach(function(button) {
-  button.addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default action of the button
-    openModal();
-  });
-});
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  closeModal();
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    closeModal();
+window.onclick = function (e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
   }
-}
+};
 
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-  this.classList.toggle('active');
-  document.querySelector('.lists ul').classList.toggle('active');
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
-// js for email
-var form = document.getElementById("my-form");
-  
-async function handleSubmit(event) {
-  event.preventDefault();
-  var status = document.getElementById("my-form-status");
-  var data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-        'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      status.innerHTML = "Thanks for your submission!";
-      form.reset()
-    } else {
-      response.json().then(data => {
-        if (Object.hasOwn(data, 'errors')) {
-          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-        } else {
-          status.innerHTML = "Oops! There was a problem submitting your form"
+
+
+
+
+let swiper;
+
+function initSwiper(){
+
+  if(window.innerWidth <= 768){
+
+    if(!swiper){
+      swiper = new Swiper('.destinations-slider', {
+
+        slidesPerView:1,
+        spaceBetween:20,
+        loop:true,
+
+        autoplay:{
+          delay:2000,
+          disableOnInteraction:false
         }
-      })
+
+      });
     }
-  }).catch(error => {
-    status.innerHTML = "Oops! There was a problem submitting your form"
-  });
+
+  } else {
+
+    if(swiper){
+      swiper.destroy(true,true);
+      swiper = undefined;
+    }
+
+  }
+
 }
-form.addEventListener("submit", handleSubmit)
+
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    initSwiper();
+    setTimeout(() => {
+      if(swiper) {
+        swiper.update();
+        swiper.recalcSlides();
+      }
+    }, 100);
+  }, 300);
+});
+
+
+
+window.addEventListener('resize', initSwiper);
+
+
+
+
+const cards = document.querySelectorAll(".package-card, .destination-inner");
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+},{
+  threshold:0.15,
+  rootMargin:"0px 0px -40px 0px"
+});
+
+cards.forEach(card=>{
+  observer.observe(card);
+});
+
