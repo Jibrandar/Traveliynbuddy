@@ -1,599 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>TraveliynBuddy</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Traveliyn Buddy,travelinn buddy,traveling buddy,travelbuddy,traveliynbuddy,travelingbuddy,jktravel,kashmirtravel,kashmir travel,travelinbuddy,travelin buddy" />
-    <meta name="description" content="Traveliyn Buddy: Your ultimate companion for seamless adventures! Discover tailored itineraries, connect with fellow travelers, and unlock insider tips for unforgettable journeys. Explore the world with confidence, supported by a community of like-minded explorers. Start your next adventure with Traveliyn Buddy today" />
-    <meta name="author" content="Jibran Bin Ajaz" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="assests/new logo.jpg" type="image/x-icon">
-  </head>
-  <body>
-    
-    <section id="Home" class="lazy-background">
-      <header>
-        <nav>
-          <div class="navLogo">
-            <img src="assests/new logo.png" alt="Business Logo" />
-          </div>
-          <div class="menu-toggle">
-            <div class="hamburger"></div>
-        </div>
-          <div class="lists">
-            <ul>
-              <li>
-                <a href="#Home">Home <i class="fa-solid fa-house"></i></a>
-              </li>
-              <li>
-                <a href="#HolidayPackages" class="home-link"
-                  >Holiday Packages <i class="fa-solid fa-mountain"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#CarRental"
-                  >Car Rental <i class="fa-solid fa-car"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#ContactUs"
-                  >Contact Us <i class="fa-solid fa-phone"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#Gallery"
-                  >Gallery <i class="fa-solid fa-photo-film"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-  
-      <div class="intro">
-        <h2>Welcome to Traveliyn buddy</h2>
-        <h3>Your ultimate companion for extraordinary travel experiences</h3>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TraveliynBuddy</title>
+
+<link rel="stylesheet" href="style.css">
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="https://res.cloudinary.com/devdcurg6/image/upload/v1777049347/new_xksqyx.webp" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049347/new_xksqyx.webp" alt="Company Logo">
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+      ☰
+    </div>
+    </nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Explore The Beauty Of Kashmir</h1>
+
         <p>
-          Discover the world with our expert guides,personalized itineraries,and
-          seamless planning services.
+            Discover breathtaking destinations, unforgettable experiences,
+            and perfectly crafted journeys with our premium travel services.
         </p>
 
-        <a href="#HolidayPackages" class="explore">EXPLORE NOW</a>
-      </div>
-    </section>
-    <section id="HolidayPackages">
-      <div id="Packages" class="head">
-        <span>Our Captivating</span>
-        <span>Packages</span>
-      </div>
-      <div class="grid">
-        <div class="items">
-          <div class="image"><img src="assests/package1-.jpg" alt="" /></div>
-          <div class="title">
-            <h3>Peek into Paradise</h3>
-            <p>
-              Enjoy a delightful short trip to explore Kashmir, the paradise on
-              earth, in under four days.
-            </p>
-          </div>
+        <div class="hero-buttons">
 
-          <div class="details">
-            <h3><i class="fa-solid fa-calendar-days"></i> 4 Days 3 Nights</h3>
-            <p><i class="fa-solid fa-house"></i> Srinagar(2N), Houseboat(1N)</p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i> Srinagar, Pahalgham,
-              Gulmarg
-            </p>
+            <a href="#packages" class="btn-primary">Explore Tours</a>
 
-            <div class="details-img">
-              <img src="assests/detailsimg.webp" alt="" />
-            </div>
-          </div>
+            <a href="#contact" class="btn-secondary">Book Now</a>
 
-          <button class="booknow">
-            Book Now
-          </button>
         </div>
-        <div class="items">
-          <div class="image"><img src="assests/package 1.jpg" alt="" /></div>
-          <div class="title">
-            <h3>Marvellous Kashmir Spring Tour</h3>
-            <p>
-                Discover Kashmir's Winter Wonderland: Unforgettable Journey through Snowy Landscapes
-            </p>
-          </div>
 
-          <div class="details">
-            <h3><i class="fa-solid fa-calendar-days"></i> 5 Days 4 Nights</h3>
-            <p><i class="fa-solid fa-house"></i> Srinagar(2N), Pahalgham(1N), Houseboat(1N) </p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i>  Srinagar, Pahalgham, Gulmarg
-            </p>
-
-            <div class="details-img">
-              <img src="assests/detailsimg.webp" alt="" />
-            </div>
-          </div>
-
-          <button class="booknow">
-            Book Now
-          </button>
-        </div>
-        <div class="items">
-          <div class="image"><img src="assests/package3-.jpg" alt="" /></div>
-          <div class="title">
-            <h3>Romantic Kashmir Tour</h3>
-            <p>
-                Create Everlasting Memories in the World's Most Romantic Destination
-            </p>
-          </div>
-
-          <div class="details" >
-            <h3><i class="fa-solid fa-calendar-days"></i> 5 Days 4 Nights</h3>
-            <p><i class="fa-solid fa-house"></i> Srinagar(1N), Pahalgham(1N), Gulmarg(1N) houseboat(1N)</p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i> Srinagar, Pahalgham, Gulmarg
-
-            </p>
-
-            <div class="details-img">
-              <img src="assests/detailsimg.webp "  alt="" />
-            </div>
-          </div>
-
-          <button class="booknow">
-            Book Now
-          </button>
-        </div>
-        <div class="items">
-          <div class="image"><img src="assests/package 4.jpg" alt="" /></div>
-          <div class="title">
-            <h3>Kashmir Tulips Paradise Tour</h3>
-            <p>
-                Lock the beautiful moments of your life which you can spend in Kashmir with your dear ones
-            </p>
-          </div>
-
-          <div class="details">
-            <h3><i class="fa-solid fa-calendar-days"></i> 6 Days 5 Nights</h3>
-            <p><i class="fa-solid fa-house"></i> Srinagar(2N), Gulmarg(1N), Pahalgham(1N), Houseboat(1N)</p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i> Srinagar, Pahalgham,
-              Gulmarg,Sonamarg
-            </p>
-
-            <div class="details-img">
-              <img src="assests/detailsimg.webp" alt="" />
-            </div>
-          </div>
-
-          <button class="booknow">
-            Book Now
-          </button>
-        </div>
-        <div class="items">
-          <div class="image"><img src="assests/amarnath.jpeg" alt="" /></div>
-          <div class="title">
-            <h3>Amarnath Holy Yatra</h3>
-            <p>
-                Experience the spiritual journey to the holy Amarnath Cave with our all-inclusive Amarnath Yatra package.
-            </p>
-          </div>
-
-          <div class="details">
-            <h3><i class="fa-solid fa-calendar-days"></i> 6 Days 5 Nights</h3>
-            <p><i class="fa-solid fa-house"></i> Srinagar(1N), Pahalgham(1N),
-            Sonamrg(3N) </p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i>  Dal Lake, Pahalgham, Sonamarg
-            </p>
-
-            <div class="details-img">
-              <img src="assests/detailsimg.webp" alt="" />
-            </div>
-          </div>
-
-          <button class="booknow">
-            Book Now
-          </button>
-        </div>
-        <div class="items">
-          <div class="image"><img src="assests/package5-.jpg" alt="" /></div>
-          <div class="title">
-            <h3>Kashmir Honeymoon Joy</h3>
-            <p>
-                Enhance the romance in your marriage with the unparalleled options Kashmir provides
-            </p>
-          </div>
-
-          <div class="details">
-            <h3><i class="fa-solid fa-calendar-days"></i> 7 Days 6 Nights</h3>
-            <p><i class="fa-solid fa-house"></i>  Srinagar(2N), Pahalgham(2N), Gulmarg(1N), Houseboat(1N)</p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i> Srinagar, Pahalgham, Gulmarg, Sonmarg, Doodhpathri
-            </p>
-
-            <div class="details-img">
-              <img src="assests/detailsimg.webp" alt="" />
-            </div>
-          </div>
-
-          <button class="booknow">
-            Book Now
-          </button>
-        </div>
-        <div class="items">
-          <div class="image"><img src="assests/package 6.jpg" alt="" /></div>
-          <div class="title">
-            <h3>Kashmir Family Tour</h3>
-            <p>
-                Treat your dear ones with serene landscape, rich culture and boundless adventures in Kashmir
-            </p>
-          </div>
-
-          <div class="details">
-            <h3><i class="fa-solid fa-calendar-days"></i> 8 Days 7 Nights</h3>
-            <p><i class="fa-solid fa-house"></i> Srinagar(3N), Pahalgham(2N), Gulmarg(1N), Houseboat(1N)</p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i> Srinagar, Pahalgham, Gulmarg, Sonmarg, Doodhpathri
-
-            </p>
-
-            <div class="details-img">
-              <img src="assests/detailsimg.webp" alt="" />
-            </div>
-          </div>
-
-          <button class="booknow">
-            Book Now
-          </button>
-        </div>
-      </div>
-
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>CONTACT US</h2>
-          <form id="bookingForm" action="https://formspree.io/f/xjkbqbgz" method="post">
-            
-            <label for="name">Name:</label>
-            <input type="text"  name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email"  name="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel"  name="phone" required>
-
-            <label for="duration">Trip Duration:</label>
-            <input type="text"  name="duration" required>
-
-            <label for="startdate">Trip Start Date:</label>
-            <input type="date"  name="startdate" required>
-
-            <label for="details">Details:</label>
-            <textarea  name="details" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-         
-        </div>
-        </div>
-      </div>
-      
-
-      <div class="inc-exc">
-        <div class="inclusions">
-            <h4>Inclusions</h4>
-            <ul>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>Airport Pick + Drop</li>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>Accommodation</li>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>Daily Breakfast + Dinner</li>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>Cab with Driver</li>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>Sightseeing</li>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>Parking + Tolls</li>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>On-call Support</li>
-                <li><i class="fa-solid fa-square-check" style="color: lightgreen;"></i>Shikara Ride</li>
-
-                
-            </ul>
-        </div>
-        <div class="exclusions">
-            <h4>Exclusions</h4>
-
-            <ul>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i> GST 5% Additional</li>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i>Train or Flight Fare</li>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i>Meals other than Breakfast and Dinner
-                </li>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i>Tips or porterages</li>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i>Laundry</li>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i>Rides</li>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i>Insurance</li>
-                <li><i class="fa-solid fa-circle-xmark" style="color: red;"></i>Medical</li>
-
-            </ul>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="CarRental">
-      <div class="car-head">
-        <h1>Car Rental Offerings</h1>
-      </div>
-
-        <div class="grid">
-          <div class="items">
-            <div class="carimage"><img src="assests/innova.jpg" alt="" /></div>
-            <div class="title">
-              <h3>Toyota Innova</h3>
-              <p>
-                The Toyota Innova offers comfort, space, and reliability, perfect for family trips or business travel
-              </p>
-            </div>
-            <button class="booknow">
-              Book Now
-            </button>
-          </div>
-
-          <div class="items">
-            <div class="image"><img src="assests/glanza.webp" alt="" /></div>
-            <div class="title">
-              <h3>Toyota Glanza</h3>
-              <p>
-                The Toyota Glanza offers a seamless blend of style, comfort, and efficiency, making it an ideal choice for travel
-              </p>
-            </div>
-            <button class="booknow">
-              Book Now
-            </button>
-          </div>
-          <div class="items">
-            <div class="image"><img src="assests/dzire.webp" alt="" /></div>
-            <div class="title">
-              <h3>Swift Dzire</h3>
-              <p>
-                Maruti Suzuki Dzire: The Maruti Suzuki Dzire is a popular compact sedan which offers a comfortable and smooth ride
-              </p>
-            </div>
-            <button class="booknow">
-              Book Now
-            </button>
-          </div>
-          <div class="items">
-            <div class="image"><img src="assests/amaze.webp" alt="" /></div>
-            <div class="title">
-              <h3>Honda Amaze</h3>
-              <p>
-                The Honda Amaze is a stylish and reliable compact sedan that combines efficiency with comfort
-              </p>
-            </div>
-            <button class="booknow">
-              Book Now
-            </button>
-          </div>
-          <div class="items">
-            <div class="image"><img src="assests/temp traveller.jpg" alt="" /></div>
-            <div class="title">
-              <h3>Tempo Traveller</h3>
-              <p>
-                 The Temp Traveller is a versatile and spacious vehicle perfect for group travel
-              </p>
-            </div>
-            <button class="booknow">
-              Book Now
-            </button>
-          </div>
-          <div class="items">
-            <div class="image"><img src="assests/urbania.webp" alt="" /></div>
-            <div class="title">
-              <h3>Urbania</h3>
-              <p>
-               Urbania is a compact yet stylish car designed for city driving and short trips
-              </p>
-            </div>
-            <button class="booknow">
-              Book Now
-            </button>
-          </div>
-       
-        
-      </div>
-    </section>
-    <section id="ContactUs">
-      <div class="head-contact">
-        <h1>
-          Contact Us
-        </h1>
-      </div>
-      <div class="container">
-
-
-        
-      
-        <div class="wrapper">
-      
-          <!-- COMPANY INFORMATION -->
-          <div class="company-info">
-            <h3>TRAVELIYN BUDDY</h3>
-      
-            <ul>
-              <li><i class="fa fa-road"></i> Alamdar Housing Colony, Bemina, Srinagar, Jammu and Kashmir 190018
-              </li>
-              <li><i class="fa fa-phone"></i> 7889911841,9797969401</li>
-              <li><i class="fa fa-envelope"></i> info@traveliynbuddy.com || Reservations at <i class="fa fa-envelope"></i> Traveliynbuddy@gmail.com</li>
-            </ul>
-          </div>
-          <!-- End .company-info -->
-      
-          <!-- CONTACT FORM -->
-          <div class="contact">
-            <h3>E-mail Us</h3>
-      
-            <form id="contact-form" action="https://formspree.io/f/xjkbqbgz" method="post">
-              
-      
-              <p>
-                <label>Name</label>
-                <input type="text" name="name"  required>
-              </p>
-      
-              
-      
-              <p>
-                <label>E-mail Address</label>
-                <input type="email" name="email"  required>
-              </p>
-      
-              <p>
-                <label>Phone Number</label>
-                <input type="text" name="phone" >
-              </p>
-      
-              <p class="full">
-                <label>Tour Details</label>
-                <textarea name="details" rows="5" ></textarea>
-              </p>
-      
-              <p class="full">
-                <button type="submit">Submit</button>
-              </p>
-      
-            </form>
-            <!-- End #contact-form -->
-          </div>
-          <!-- End .contact -->
-      
-        </div>
-        <!-- End .wrapper -->
-      </div>
-      <!-- End .container -->
-    </section>
-    <section id="Gallery">
-      
-      <section class="text-gray-400 bg-gray-900 body-font">
-        
-        </div>
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Journey Through Our Lens</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Embark on a visual voyage through our curated collection of travel photos. From captivating landscapes to cultural encounters, each image invites you to explore the beauty and diversity of our world. Let these snapshots inspire your next adventure.</p>
-          </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="assests/gallery/dal.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Dal Lake</h2>
-                  
-                  <p class="leading-relaxed">Dal Lake, an iconic jewel nestled in the heart of Srinagar, Kashmir,</p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="assests/gallery/kashmir 2.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Aru Valley</h2>
-                  
-                  <p class="leading-relaxed">
-                    Nestled amidst the picturesque landscapes of Kashmir, Aru Valley is a serene gem waiting to be discovered</p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="assests/gallery/Kashmir1.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Keran</h2>
-                  
-                  <p class="leading-relaxed">Keran is a tehsil in Kupwara district, Jammu and Kashmir, India. It is on the bank of the Kishanganga River.</p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="assests/gallery/pangong.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Pangong Lake</h2>
-                  
-                  <p class="leading-relaxed">Pangong Lake, a breathtaking marvel nestled in the Ladakh region of India</p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="assests/gallery/sheep.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Meadows</h2>
-                  
-                  <p class="leading-relaxed">Meadows, with their lush carpets of greenery, evoke a sense of tranquility and natural beauty.</p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="assests/gallery/kashmir 3.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Pahalgham</h2>
-                  
-                  <p class="leading-relaxed">Pahalgam, nestled in the pristine valleys of Kashmir, is a breathtaking paradise renowned for its natural beauty and captivating landscapes</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer>
-        <div class="footer-content">
-            <div class="logoF">
-                <img src="assests/new logo.jpg" alt="Logo">
-            </div>
-            <div class="contact-info">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><i class="fas fa-phone"></i> Phone: 7889911841, 9797969401</li>
-                    <li><i class="fas fa-envelope"></i> Email: info@traveliynbuddy.com</li>
-                </ul>
-            </div>
-            
-            <div class="social-media">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="https://www.facebook.com/profile.php?id=61560077924390&mibextid=ZbWKwL"><i style="color: black;" class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/traveliynbuddy?igsh=MXIzaDBrOXozdGtjeA=="><i  style="color: black;" class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-            <div class="reg">
-              <div class="registerd">
-                <img src="assests/jktourism logo.png" alt=""><span>Registered By J&K Tourism Department</span>
-                <div>Registration Number : JKEA00004167</div>
-              </div>
-                
-              </div>
-              
-            
-            
-        </div>
-        
-    </footer>
-
-    <div class="whatsapp">
-      <a href="https://api.whatsapp.com/send?phone=919797969401"><img src="assests/whatsapplogo.png" alt=""></a>
     </div>
-    
-       <script src="script.js"></script>
 
-  </body>
+</section>
+
+<section class="destinations" id="destinations">
+
+  <div class="section-title">
+    <h2>Popular Destinations</h2>
+    <p>Discover the most beautiful places to visit.</p>
+  </div>
+
+  <div class="swiper destinations-slider">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049361/srinagar_etguxe.webp" alt="Srinagar">
+          <div class="destination-overlay">
+            <h3>Srinagar</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049349/gulmarg_livg7i.webp" alt="Gulmarg">
+          <div class="destination-overlay">
+            <h3>Gulmarg</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049353/pahalgam_a3qi8u.webp" alt="Pahalgam">
+          <div class="destination-overlay">
+            <h3>Pahalgam</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049359/sonamarg_yek2ix.webp" alt="Sonmarg">
+          <div class="destination-overlay">
+            <h3>Sonmarg</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049367/yusmarg_wb3dam.webp" alt="Yusmarg">
+          <div class="destination-overlay">
+            <h3>Yusmarg</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049347/doodhpatri_bryvxp.webp" alt="Doodhpatri">
+          <div class="destination-overlay">
+            <h3>Doodhpatri</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049351/gurez_valley_xveeif.webp" alt="Gurez Valley">
+          <div class="destination-overlay">
+            <h3>Gurez Valley</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049350/bangus_valley_gzuifj.webp" alt="Bangus Valley">
+          <div class="destination-overlay">
+            <h3>Bangus Valley</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide destination-card">
+        <div class="destination-inner">
+          <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049350/ladakh_k2acwn.webp" alt="Leh Ladakh">
+          <div class="destination-overlay">
+            <h3>Leh Ladakh</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="packages" id="packages">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Tour Packages</h2>
+      <p>Explore the beauty of Kashmir with our carefully crafted travel packages.</p>
+    </div>
+
+    <div class="packages-grid">
+
+      <!-- Package 1 -->
+      <div class="package-card">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049354/package_1_cy8iw2.webp" alt="Kashmir Tour">
+        <div class="package-info">
+          <h3>PEEK INTO PARADISE</h3>
+          <span class="duration">4 Days / 3 Nights</span>
+          <p>Experience Srinagar, Gulmarg and Pahalgam with beautiful landscapes.</p>
+          <div class="package-footer">
+            
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="package-card">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049361/sumaid-pal-singh-bakshi-pAvK_EZMg4Q-unsplash_pronyp.webp" alt="Gulmarg Tour">
+        <div class="package-info">
+          <h3>MARVELLOUS KASHMIR TOUR</h3>
+          <span class="duration">5 Days / 4 Nights</span>
+          <p>Discover Kashmir's Winter Wonderland: Unforgettable Journey through Snowy Landscapes</p>
+          <div class="package-footer">
+            
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="package-card">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049352/anubhav-sonker-YmfNszDqzPA-unsplash_aleo07.webp" alt="Ladakh Tour">
+        <div class="package-info">
+          <h3>KASHMIR FAMILY TOUR</h3>
+          <span class="duration">8 Days / 7 Nights</span>
+          <p>Treat your dear ones with serene landscape, rich culture and boundless adventures in Kashmir</p>
+          <div class="package-footer">
+            
+            <a href="#packages" class="btn book-btn" data-package="Ladakh Tour">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049356/package_4_sc41xh.webp" alt="Ladakh Tour">
+        <div class="package-info">
+          <h3> TULIPS PARADISE TOUR</h3>
+          <span class="duration">6 Days / 5 Nights</span>
+          <p>Lock the beautiful moments of your life which you can spend in Kashmir with your dear ones</p>
+          <div class="package-footer">
+            
+            <a href="#packages" class="btn book-btn" data-package="Ladakh Tour">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049350/amarnath_fpcovf.webp" alt="Ladakh Tour">
+        <div class="package-info">
+          <h3>AMARNATH HOLY YATRA</h3>
+          <span class="duration">6 Days / 5 Nights</span>
+          <p>Experience the spiritual journey to the holy Amarnath Cave with our all-inclusive Amarnath Yatra package</p>
+          <div class="package-footer">
+            
+            <a href="#packages" class="btn book-btn" data-package="Ladakh Tour">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049351/package3-_qktsxl.webp" alt="Ladakh Tour">
+        <div class="package-info">
+          <h3>KASHMIR HONEYMOON JOY</h3>
+          <span class="duration">7 Days / 6 Nights</span>
+          <p>Enhance the romance in your marriage with the unparalleled options Kashmir provides</p>
+          <div class="package-footer">
+            
+            <a href="#packages" class="btn book-btn" data-package="Ladakh Tour">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<div id="bookingModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+
+    <h2>Book Your Tour</h2>
+
+    <form  id="bookingForm" action="https://formsubmit.co/traveliynbuddy@gmail.com" method="POST">
+        <input type="text" name="package" id="packageName" placeholder="Package Name" readonly>
+        
+
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <input type="hidden" name="_captcha" value="false">
+      
+
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+
+      <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+
+      
+
+      <textarea name="message" id="message" placeholder="Your Travel Details"></textarea>
+
+      <button type="submit">Send Booking</button>
+
+    </form>
+
+  </div>
+
+</div>
+<section class="about" id="about">
+
+  <div class="about-container">
+
+    <div class="about-image">
+      <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777050418/about_gq4uh7.webp" alt="About Travel">
+    </div>
+
+    <div class="about-content">
+
+      <h2>About Us</h2>
+
+      <p>
+        We are a passionate travel company dedicated to providing unforgettable
+        experiences across Kashmir and Ladakh. With years of experience in the
+        tourism industry, we help travelers explore the breathtaking beauty of
+        the Himalayas with comfort and reliability.
+      </p>
+
+      <p>
+        From customized tour packages to hotel bookings and transportation,
+        our team ensures every journey is smooth, safe, and memorable.
+      </p>
+
+      <div class="about-stats">
+
+        <div class="stat">
+          <h3>5+</h3>
+          <span>Years Experience</span>
+        </div>
+
+        <div class="stat">
+          <h3>1000+</h3>
+          <span>Happy Travelers</span>
+        </div>
+
+        <div class="stat">
+          <h3>5⭐</h3>
+          <span>Google Rating</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="why-us">
+
+  <div class="section-title">
+    <h2>Why Choose Us</h2>
+    <p>We provide the best travel experience with reliable services and unforgettable journeys.</p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="icon">🌍</div>
+      <h3>Best Destinations</h3>
+      <p>We offer the most beautiful and popular destinations across Kashmir</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">💰</div>
+      <h3>Best Price </h3>
+      <p>Our packages are affordable with the best services and no hidden charges.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">⭐</div>
+      <h3>Trusted by Travelers</h3>
+      <p>Thousands of happy travelers trust us for their unforgettable journeys.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">📞</div>
+      <h3>24/7 Support</h3>
+      <p>Our team is available anytime to help you with bookings and travel support.</p>
+    </div>
+
+  </div>
+
+</section>
+<section class="testimonials">
+
+  <div class="section-title">
+    <h2>What Our Travelers Say</h2>
+    <p>Real experiences from our happy customers.</p>
+  </div>
+
+  <div class="testimonial-grid">
+
+    <div class="testimonial-card">
+      <p class="review">
+        “My trip with Traveliyn Buddy was absolutely amazing! We got to visit so many incredible places like Srinagar, Sonamarg, Gulmarg, and Phalgam. The whole experience was so well organized, and everything went smoothly. I recommend traveling buddy for amazing experience”
+      </p>
+
+      <div class="client">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049349/client1_uflstt.webp" alt="client">
+        <div>
+          <h4>Abhishek Chandel</h4>
+          <span>Delhi</span>
+        </div>
+      </div>
+
+      <div class="stars">★★★★★</div>
+    </div>
+
+
+    <div class="testimonial-card">
+      <p class="review">
+        “I visited Kashmir with my family and friends, And Kashmir is heaven on earth undoubtedly. But our travel guide made it even more smooth, secure, beautiful and mesmerising. Thank you Traveliyn Buddy Tour & Travels.
+I sincerely suggest everyone planning to visit Kashmir to contact them.”
+      </p>
+
+      <div class="client">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049349/client2_qo8udp.webp" alt="client">
+        <div>
+          <h4>Rekha Dwivedi</h4>
+          <span>Mumbai</span>
+        </div>
+      </div>
+
+      <div class="stars">★★★★★</div>
+    </div>
+
+
+    <div class="testimonial-card">
+      <p class="review">
+        “We were in kashmir for 10 days. Mr. Aamin was with us for all 10 days with his own all new Toyota glanza. Car was in very good condition. Very friendly and genuine person. He not only helped us in many ways but also guided on many spots as a local. Which proves very helpful.”
+      </p>
+
+      <div class="client">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049347/client3_dt5nbz.webp" alt="client">
+        <div>
+          <h4>Ankur Kushwaha</h4>
+          <span>Ahmedabad</span>
+        </div>
+      </div>
+
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="review">
+        “Best travel agency such a great experience with Traveliyn buddy tour and travels they provide best facilities to the customers highly recommended.”
+      </p>
+
+      <div class="client">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049345/client4_ugapr5.webp" alt="client">
+        <div>
+          <h4>Sonal Shukla</h4>
+          <span>Ahmedabad</span>
+        </div>
+      </div>
+
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="review">
+        “Best travel service we have used. Hotels, transport and support were excellent.Made our vacation memorable. I highly recommend them.”
+      </p>
+
+      <div class="client">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049348/client_5_kdawcn.webp" alt="client">
+        <div>
+          <h4>Ameyaa</h4>
+          <span>Ahmedabad</span>
+        </div>
+      </div>
+
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="review">
+        “Had an amazing Kashmir trip with Traveliyn Buddy. Everything was perfectly organized and the service was excellent, reliable, affordable, and very well organized.”
+      </p>
+
+      <div class="client">
+        <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049349/client6_clvrwg.webp" alt="client">
+
+        <div>
+          <h4>Shubham Mishra</h4>
+          <span>Ahmedabad</span>
+        </div>
+      </div>
+
+      <div class="stars">★★★★★</div>
+    </div>
+
+    
+
+  </div>
+
+</section>
+<section class="gallery" id="Gallery">
+
+  <div class="section-title">
+    <h2>Travel Gallery</h2>
+    <p>Explore the beauty of Kashmir through our travel moments.</p>
+  </div>
+
+  <div class="gallery-grid">
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049360/srinagargallery_b2migf.webp" alt="Kashmir">
+    <div class="gallery-overlay">Srinagar</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049354/shankracharya_zhguru.webp" alt="Kashmir">
+    <div class="gallery-overlay">Shankracharya</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049346/gulmarggallery_rh1qoq.webp" alt="Kashmir">
+    <div class="gallery-overlay">Gulmarg</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049348/betaab_uwjcmb.webp" alt="Kashmir">
+    <div class="gallery-overlay">Betaab Valley</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049362/thajwas_uuuruz.webp" alt="Kashmir">
+    <div class="gallery-overlay">Thajiwas Glacier</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049366/tulipgallery_evimtk.webp" alt="Kashmir">
+    <div class="gallery-overlay">Tulip Garden</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049359/sonamarggallery_aiatnn.webp" alt="Kashmir">
+    <div class="gallery-overlay">Sonamarg</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049367/yusmarg_galery_coi2qt.webp" alt="Kashmir">
+    <div class="gallery-overlay">Yusmarg</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049348/doodhpathrigallery_ljjzza.webp" alt="Kashmir">
+    <div class="gallery-overlay">Doodhpatri</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049351/dachigam_iepqy8.webp" alt="Kashmir">
+    <div class="gallery-overlay">Dachigam</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049352/mansabak_i35yil.webp" alt="Kashmir">
+    <div class="gallery-overlay">Manasbal Lake</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777049346/gangbal_j1w6oi.webp" alt="Kashmir">
+    <div class="gallery-overlay">Gangbal Lake</div>
+  </div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>Plan your dream trip to Kashmir. Send us a message and we will assist you.</p>
+  </div>
+
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+
+      <div class="info-box">
+        <h3>📍 Address</h3>
+        <p>Bemina,Srinagar, Jammu & Kashmir, India</p>
+      </div>
+
+      <div class="info-box">
+        <h3>📞 Phone</h3>
+        <p>+91 7889911841 ,+91 9797969401</p>
+      </div>
+
+      <div class="info-box">
+        <h3>✉ Email</h3>
+        <p>traveliynbuddy@gmail.com</p>
+      </div>
+
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form" action="https://formsubmit.co/traveliynbuddy@gmail.com">
+
+      <input type="text" placeholder="Your Name" name="Name" required>
+
+      <input type="email" placeholder="Your Email" name="email" required>
+
+      <input type="text" placeholder="Phone Number" name="Phone Number">
+      <input type="hidden" name="_captcha" value="false">
+
+
+      <input type="text" placeholder="Destinations" name="Destinations">
+
+      <textarea rows="5" placeholder="Your Message" name="Message"></textarea>
+
+      <button type="submit">Send Inquiry</button>
+
+    </form>
+
+  </div>
+
+</section>
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Company -->
+    <div class="footer-box">
+      <h3>TraveliynBuddy</h3>
+      <p>We provide unforgettable travel experiences across Kashmir and Ladakh with the best service and support.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Tour Packages</a></li>
+        <li><a href="#Gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Registration -->
+    <div class="footer-registration">
+      <div class="reglogo"><img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777050854/jktourism_vetquh.webp" alt=""></div>
+      <p>Recognised by J&K Tourism Department</p>
+      <p>Registration Number : JKEA000004167</p>
+      
+     
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>📍 Bemina, Srinagar, Jammu & Kashmir</p>
+      <p>📞 +91 7889911841 , +91 9797969401</p>
+      <p>✉ traveliynbuddy@gmail.com</p>
+
+      <div class="social">
+        <a href="https://www.facebook.com/p/Traveliyn-Buddy-61560077924390/">Facebook</a>
+        <a href="https://www.instagram.com/traveliynbuddy/">Instagram</a>
+        <a href="https://wa.me/919797969401">WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Traveliyn Buddy | All Rights Reserved</p>
+  </div>
+
+</footer>
+<a href="https://wa.me/919797969401?text=Hello%20I%20want%20to%20book%20a%20tour%20package" class="whatsapp-float"><img src="https://res.cloudinary.com/devdcurg6/image/upload/v1777050924/whatsapplogo_ywftnx.webp" alt="" style="height: 60px;"></a>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
 </html>
