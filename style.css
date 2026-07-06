@@ -2263,6 +2263,10 @@ nav{
   display:flex;
 }
 
+.nav-links a{
+  color:#222;
+}
+
 .hero{
   padding:0 30px;
   height:85vh;
