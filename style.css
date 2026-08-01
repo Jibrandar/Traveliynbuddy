@@ -33,9 +33,11 @@ align-items:center;
 }
 
 .logo img{
-height:150px;
-width:auto;
+height:125px;
+width:255px;
+object-fit:contain;
 display:block;
+mix-blend-mode:multiply;
 }
 
 /* NAV LINKS */
@@ -2308,8 +2310,9 @@ nav{
   padding:12px 18px;
 }
 
-.navLogo img{
-  height:45px;
+.logo img{
+  height:62px;
+  width:130px;
 }
 
 
